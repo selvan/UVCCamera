@@ -61,12 +61,12 @@ public final class MainActivity extends BaseActivity implements CameraDialog.Cam
 	private UVCCameraHandler mHandlerR;
 	private CameraViewInterface mUVCCameraViewR;
 	private ImageButton mCaptureButtonR;
-	private Surface mRightPreviewSurface;
+
 
 	private UVCCameraHandler mHandlerL;
 	private CameraViewInterface mUVCCameraViewL;
 	private ImageButton mCaptureButtonL;
-	private Surface mLeftPreviewSurface;
+
 
 
 	@Override
@@ -236,10 +236,6 @@ public final class MainActivity extends BaseActivity implements CameraDialog.Cam
 					@Override
 					public void run() {
 						mHandlerL.close();
-						if (mLeftPreviewSurface != null) {
-							mLeftPreviewSurface.release();
-							mLeftPreviewSurface = null;
-						}
 						setCameraButton();
 					}
 				}, 0);
@@ -248,10 +244,6 @@ public final class MainActivity extends BaseActivity implements CameraDialog.Cam
 					@Override
 					public void run() {
 						mHandlerR.close();
-						if (mRightPreviewSurface != null) {
-							mRightPreviewSurface.release();
-							mRightPreviewSurface = null;
-						}
 						setCameraButton();
 					}
 				}, 0);
