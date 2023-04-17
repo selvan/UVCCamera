@@ -44,7 +44,7 @@ If you want to use Android Studio(unfortunately NDK supporting on Android Studio
 5. Android Studio raise some errors but just ignore now. Android Studio generate `local.properties` file. Please open `local.properties` and add `ndk.dir` key to the end of the file. The contents of the file looks like this.
 ```
 sdk.dir={path to Android SDK on your storage}
-ndk.dir={path to Android SDK on your storage}
+ndk.dir={path to Android NDK on your storage}
 ```
 Please replace actual path to SDK and NDK on your storage.  
 Of course you can make `local.properties` by manually instead of using automatically generated ones by Android Studio.
@@ -58,7 +58,7 @@ If you still need to use Eclipse or if you don't want to use Gradle with some re
 1. make directory on your favorite place.
 2. change directory into the directory.
 3. clone this repository with `git  clone https://github.com/saki4510t/UVCCamera.git`
-4. change directory into `{UVCCamera}/libuvccamera/build/src/main/jni` directory.
+4. change directory into `{UVCCamera}/libuvccamera/src/main/jni` directory.
 5. run `ndk-build`
 6. resulted shared libraries are available under `{UVCCamera}/libuvccamera/build/src/main/libs` directory and copy them into your project with directories by manually.
 7. copy files under `{UVCCamera}/libuvccamera/build/src/main/java` into your project source directory by manually.
